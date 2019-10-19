@@ -4,7 +4,7 @@
   "description": "react express template",
   "main": "api/app.js",
   "scripts": {
-    "start":"cd api && npm install && npm start",
+    "build":"cd api && npm install && npm start",
     "heroku-postbuild":"cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
