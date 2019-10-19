@@ -1,0 +1,21 @@
+{
+  "name": "react-express-app",
+  "version": "1.0.0",
+  "description": "react express template",
+  "main": "api/app.js",
+  "scripts": {
+    "start":"node api/app.js",
+    "heroku-postbuild":"cd client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylvne/react-express-app.git"
+  },
+  "author": "Delane Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylvne/react-express-app/issues"
+  },
+  "homepage": "https://github.com/dylvne/react-express-app#readme"
+}

@@ -7,7 +7,7 @@ class Home extends React.Component{
     }
     
     callAPI() {
-        fetch("http://localhost:9000/test")
+        fetch("api/test")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }));
     }
