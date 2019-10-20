@@ -5,8 +5,8 @@ class App extends Component {
 
   async componentDidMount() {
     const response = await fetch('/test')
-    const response   = await response.json()
-    this.setState({data: response})
+    const data   = await response.json()
+    this.setState({data: data})
   }
   render() {
     return (
