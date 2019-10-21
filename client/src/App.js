@@ -1,21 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
 import './App.css';
+class App extends Component {
+  state = {data:""}
 
-//component imports
-import Home from "./components/Home"
-//end of compontents
-
-
-function App() {
-  return (
-    <Router>
-      <nav>
-        <Link to="/">Nav Bar here</Link>
-      </nav>
-      <Route exact path="/" component={Home} />
-    </Router>
-  );
+  async componentDidMount() {
+    const response = await fetch('/test')
+    const data   = await response.json()
+    this.setState({data: data})
+  }
+  render() {
+    return (
+      <div>
+        <p>{this.state.data}</p>
+      </div>
+    );
+  }
 }
-
 export default App;
